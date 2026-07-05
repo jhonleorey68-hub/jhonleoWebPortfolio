@@ -1,12 +1,93 @@
-
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
+:root {
+    --page-pad: 24px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 16px;
+}
+
+.navbar {
+    padding: 0 16px;
+    height: 64px;
+}
+
+.logo {
+    margin-left: 0;
+    font-size: 1.2rem;
+}
+
+.mobile-menu {
+    padding: 20px 16px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+@media (max-width: 900px) {
+    .parent-1 {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
+    .div1,
+    .div2 {
+        margin-top: 0;
+        padding: 24px;
+    }
+
+    .div2 {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .div2 > div {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .proj_grid,
+    .graph-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-info h1,
+    .exp_p {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px 0 10px 40px;
+    }
+
+    .time_line::after {
+        left: 20px;
+    }
+
+    .left-container,
+    .right-container {
+        left: 0;
+    }
+
+    .left-container-arrow,
+    .right-container-arrow {
+        left: 10px;
+        border-right: 15px solid #f1f1f1;
+        border-left: 0;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links,
     .btn-resume {
         display: none;
     }
@@ -16,16 +97,189 @@
     }
 
     .navbar {
-        padding: 0 24px;
+        padding: 0 16px;
     }
-}
-@media (max-width: 860px) {
+
+    .nav-right {
+        margin-left: auto;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    main {
+        padding: 0 14px;
+    }
+
+    #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 14px 40px;
+        margin: 10px auto 80px;
+        min-height: auto;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
+
+    .hi {
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .name {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+    }
+
+    .p2 {
+        font-size: 1.05rem;
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
+
+    .p3 {
+        font-size: 0.95rem;
+        margin-right: 0;
+    }
+
+    .hero-left > div:last-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .view,
+    .contact {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .socials {
+        margin: 16px auto 0;
+        width: fit-content;
+        padding: 4px;
+    }
+
+    .flex {
+        width: min(280px, 80vw);
+        height: auto;
+    }
+
     .parent-1 {
-        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .div1,
     .div2 {
-        padding: 26px;
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .abt-h1,
+    .abt-p1,
+    .focus-1 {
+        max-width: none;
+    }
+
+    .ul1 {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .ul1 ul {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+
+    .parent-div2 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skill_chl1,
+    .skill_chl2,
+    .skill_chl3,
+    .skill_chl4 {
+        padding: 1rem;
+    }
+
+    .proj_grid,
+    .graph-container {
+        gap: 14px;
+        padding: 14px 0;
+    }
+
+    .grid_proj img,
+    .graph-grid img {
+        height: 220px;
+    }
+
+    .preview-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .mobile-menu {
+        padding: 16px;
+    }
+
+    #home {
+        padding: 20px 12px 32px;
+    }
+
+    .name {
+        font-size: 1.9rem;
+    }
+
+    .p2 {
+        font-size: 0.95rem;
+    }
+
+    .p3 {
+        font-size: 0.9rem;
+    }
+
+    .view,
+    .contact {
+        padding: 10px 14px;
+    }
+
+    .socials {
+        gap: 6px;
+    }
+
+    .socials img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .parent-div2 {
+        grid-template-columns: 1fr;
+    }
+
+    .proj_grid img,
+    .graph-grid img {
+        height: 180px;
+    }
+
+    .container {
+        padding-left: 34px;
+    }
+
+    .time_line::after {
+        left: 14px;
     }
 }

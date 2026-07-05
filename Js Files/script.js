@@ -6,6 +6,12 @@ if (hamburger && mobileMenu) {
     hamburger.addEventListener('click', () => {
         mobileMenu.classList.toggle('open');
     });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+    });
 }
 
 // Dark / Light mode toggle

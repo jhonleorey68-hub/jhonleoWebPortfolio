@@ -54,7 +54,7 @@
 .div2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: px;
+    gap: 20px;
     min-height: auto;
     margin-top: -70px;
 }
@@ -62,7 +62,7 @@
 
 .div2 > div {
     
-    border-radius: px;
+    border-radius: 12px;
     padding: 40px 20px;
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@
     color: white;
     flex-direction: row;
     align-items: center;
-    justify-content: s;
+    justify-content: flex-start;
     gap: 5px;
     margin-top: 15px;
     overflow-x: auto;
@@ -129,7 +129,7 @@
 }
 
 .ul1 list {
-    display:ruby ;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 10px 10px;
@@ -190,10 +190,10 @@
 
 /* container 2 */
 .div2 {
-    grid-template-columns: repeat(2, fr);
+    grid-template-columns: repeat(2, 1fr);
     min-height: 380px;
-     justify-content: center;
-     flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
