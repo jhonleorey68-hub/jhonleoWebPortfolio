@@ -1,0 +1,42 @@
+.divider-1 {
+    width: 100%;
+    height: 1px;
+    background: #2b394b;
+    margin-bottom: 150px;
+}
+/* scroll down */
+
+.scroll-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px auto 0;
+}
+.scroll-down a {
+    text-decoration: none;
+    color: white;
+}
+
+.scroll1 {
+    font-size: 12px;
+}
+
+
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: gentle-bounce 1s ease-in-out infinite;
+}
+
+/* Divider 2 */
+
+.divider-2 {
+    margin-top: 80px;
+    width: 100%;
+    height: 1px;
+    background: #2b394b;
+    margin-bottom:50px;
+}

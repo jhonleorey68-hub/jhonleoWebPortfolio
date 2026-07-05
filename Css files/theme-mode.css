@@ -1,0 +1,514 @@
+
+/* ===========================
+   THEME TOGGLE BUTTON
+=========================== */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0;
+    margin-right: 80px;
+}
+
+.theme-toggle:hover {   
+    background: rgba(255, 255, 255, 0.18);
+    transform: scale(1.08);
+}
+
+/* Show moon in dark mode, hide sun */
+.icon-moon { display: block; }
+.icon-sun  { display: none;  }
+
+/* Show sun in light mode, hide moon */
+body.light-mode .icon-moon { display: none;  }
+body.light-mode .icon-sun  { display: block; }
+
+
+/* ===========================
+   LIGHT MODE OVERRIDES
+=========================== */
+body.light-mode {
+    background: #f5f5f5;
+    color: #0f0f1a;
+}
+
+body.light-mode .navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .logo {
+    color: #0f0f1a;
+}
+
+body.light-mode .nav-links a {
+    color: #555555;
+}
+
+body.light-mode .nav-links a:hover,
+body.light-mode .nav-links a.active {
+    color: #0f0f1a;
+}
+
+body.light-mode .nav-links a::after {
+    background: #0f0f1a;
+}
+
+body.light-mode .btn-resume {
+    color: #0f0f1a;
+    border-color: #0f0f1a;
+}
+
+body.light-mode .btn-resume:hover {
+    background: #0f0f1a;
+    color: #ffffff;
+}
+
+body.light-mode .theme-toggle {
+    border-color: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.06);
+    color: #0f0f1a;
+}
+
+body.light-mode .theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode .mobile-menu {
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .mobile-menu ul a {
+    color: #555555;
+}
+
+body.light-mode .mobile-menu ul a:hover,
+body.light-mode .mobile-menu ul a.active {
+    color: #0f0f1a;
+}
+
+body.light-mode .hamburger span {
+    background: #0f0f1a;
+}
+
+body.light-mode .btn-resume {
+    animation: glow-pump-light 3s ease-in-out infinite;
+    color: #0f0f1a;
+    border-color: #0f0f1a;
+}
+
+body.light-mode .btn-resume:hover {
+    background: #0f0f1a;
+    color: #ffffff;
+    border-color: #0f0f1a;
+}
+
+body.light-mode .div1,
+body.light-mode .div2,
+body.light-mode .socials,
+body.light-mode .ul1 list {
+    border-color: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .div1,
+body.light-mode .div2 {
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .divider-1,
+body.light-mode .divider-2 {
+    background: rgba(15, 22, 42, 0.12);
+}
+
+@keyframes glow-pump-light {
+    0%, 100% {
+        box-shadow: 0 0 4px 0px rgba(15, 22, 42, 0);
+    }
+    50% {
+        box-shadow:
+            0 0 5px 3px rgba(15, 22, 42, 0.18),
+            0 0 10px 5px rgba(15, 22, 42, 0.1);
+    }
+}
+
+
+body.light-mode #home {
+    background: #f5f5f5;
+}
+
+body.light-mode #home::before,
+body.light-mode #home::after {
+    opacity: 0.12;
+}
+
+body.light-mode .hero-left .hi,
+body.light-mode .hero-left .p2,
+body.light-mode .hero-left .p3,
+body.light-mode .hero-left .name {
+    color: #0f0f1a;
+}
+
+/* ===========================
+   CONTACT THEME POLISH
+=========================== */
+#contact {
+    background: #000000;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-info-list .contact-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+
+.contact-info-list .contact-icon img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-info-item:hover .contact-icon {
+    transform: translateY(-2px);
+    background: rgba(33, 150, 243, 0.16);
+    border-color: rgba(33, 150, 243, 0.38);
+}
+
+.contact-label,
+.form-group label {
+    color: #ffffff;
+}
+
+.contact-value {
+    color: #c7cedd;
+}
+
+.form-group input,
+.form-group textarea {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.28);
+}
+
+.form-group input:-webkit-autofill,
+.form-group textarea:-webkit-autofill {
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+body.light-mode .contact-info-list .contact-icon {
+    background: rgba(15, 22, 42, 0.06);
+    border-color: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .contact-info-list .contact-icon img {
+    filter: brightness(0) saturate(100%) invert(10%) sepia(15%) saturate(1324%) hue-rotate(183deg) brightness(95%) contrast(95%);
+}
+
+body.light-mode .contact-info-item:hover .contact-icon {
+    background: rgba(33, 150, 243, 0.12);
+    border-color: rgba(33, 150, 243, 0.28);
+}
+
+body.light-mode .contact-label,
+body.light-mode .form-group label {
+    color: #0f0f1a;
+}
+
+body.light-mode .contact-value {
+    color: #4b5565;
+}
+
+body.light-mode .form-group input,
+body.light-mode .form-group textarea {
+    color: #0f0f1a;
+    border-bottom-color: rgba(15, 22, 42, 0.22);
+}
+
+body.light-mode .form-group input:-webkit-autofill,
+body.light-mode .form-group textarea:-webkit-autofill {
+    -webkit-text-fill-color: #0f0f1a;
+}
+
+body.light-mode .socials a[data-tooltip]::after,
+body.light-mode .socials a[data-tooltip]:hover::after,
+body.light-mode .socials a[data-tooltip]:focus::after {
+    color: #0f0f1a;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(15, 22, 42, 0.08);
+}
+
+body.light-mode .socials {
+    background-color: rgba(255, 255, 255, 0.72);
+    border-color: rgba(15, 22, 42, 0.08);
+}
+
+body.light-mode .div1,
+body.light-mode .div2 {
+    background: rgba(255, 255, 255, 0.90);
+    border-color: rgba(15, 22, 42, 0.12);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .div1 h2,
+body.light-mode .div1 .abt-h1,
+body.light-mode .div1 p,
+body.light-mode .div2 h2,
+body.light-mode .div2 p,
+body.light-mode .abt-p1,
+body.light-mode .focus-1,
+body.light-mode .ul1,
+body.light-mode .ul1 list,
+body.light-mode .child-1 h1,
+body.light-mode .child-1 p,
+body.light-mode .child-2 h1,
+body.light-mode .child-2 p,
+body.light-mode .child-3 h1,
+body.light-mode .child-3 p {
+    color: #0f0f1a;
+}
+
+body.light-mode .ul1 list {
+    background: rgba(15, 22, 42, 0.05);
+    border-color: rgba(15, 22, 42, 0.12);
+    color: #0f0f1a;
+}
+
+body.light-mode .divider-1,
+body.light-mode .divider-2 {
+    background: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode #home::before {
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(15, 22, 42, 0.08) 1px, transparent 1.2px),
+        radial-gradient(circle at 18% 72%, rgba(15, 22, 42, 0.06) 1.2px, transparent 1.4px),
+        radial-gradient(circle at 42% 38%, rgba(15, 22, 42, 0.05) 1px, transparent 1.3px),
+        radial-gradient(circle at 64% 14%, rgba(15, 22, 42, 0.06) 0.9px, transparent 1.2px),
+        radial-gradient(circle at 80% 64%, rgba(15, 22, 42, 0.07) 1.3px, transparent 1.6px),
+        radial-gradient(circle at 88% 85%, rgba(15, 22, 42, 0.05) 1px, transparent 1.3px);
+}
+
+body.light-mode #home::after {
+    background-image:
+        linear-gradient(120deg, rgba(15, 22, 42, 0.04) 1px, transparent 1px),
+        linear-gradient(60deg, rgba(15, 22, 42, 0.04) 1px, transparent 1px);
+}
+
+body.light-mode .col2::before {
+    border-color: rgba(15, 22, 42, 0.35);
+    box-shadow: 0 0 12px rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .p2 {
+    border-right-color: rgba(15, 22, 42, 0.8);
+    color: #0f0f1a;
+    text-shadow: none;
+}
+
+body.light-mode .cnt-1 img,
+body.light-mode .cnt-2 img,
+body.light-mode .cnt-3 img,
+body.light-mode .cnt-4 img {
+    filter: brightness(0) invert(0);
+}
+
+body.light-mode .view,
+body.light-mode .contact,
+body.light-mode .contact-info1 {
+    background-color: #0f0f1a;
+    color: #ffffff;
+    border-color: #0f0f1a;
+}
+
+body.light-mode .view:hover,
+body.light-mode .contact:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* Additional light mode coverage for missing sections */
+body.light-mode #contact {
+    background: #f5f5f5;
+}
+
+body.light-mode .contact-parent::after {
+    background: radial-gradient(circle at center, transparent 30%, #f5f5f5 90%);
+}
+
+body.light-mode .contact-son,
+body.light-mode .contact-1 h1,
+body.light-mode .contact-1 p,
+body.light-mode .contact-info1 {
+    color: #0f0f1a;
+}
+
+body.light-mode .contact-info1 {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .skills-info,
+body.light-mode .skill-info,
+body.light-mode .skillh1,
+body.light-mode .skillp1,
+body.light-mode .skill_title,
+body.light-mode .skill_tag,
+body.light-mode .skills-info p,
+body.light-mode .skills-info h1 {
+    color: #0f0f1a;
+}
+
+body.light-mode .skill_chl1,
+body.light-mode .skill_chl2,
+body.light-mode .skill_chl3,
+body.light-mode .skill_chl4 {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .skill_chl1:hover,
+body.light-mode .skill_chl2:hover,
+body.light-mode .skill_chl3:hover,
+body.light-mode .skill_chl4:hover {
+    box-shadow: 0 0 20px rgba(15, 22, 42, 0.08);
+}
+
+body.light-mode .time_line::after {
+    background-color: rgba(15, 22, 42, 0.15);
+}
+
+body.light-mode .timeline_chl1 {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(15, 22, 42, 0.12);
+    color: #0f0f1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .timeline_chl1:hover {
+    box-shadow: 0 0 20px rgba(15, 22, 42, 0.1);
+}
+
+body.light-mode .left-container-arrow {
+    border-left-color: rgba(15, 22, 42, 0.35);
+}
+
+body.light-mode .right-container-arrow {
+    border-right-color: rgba(15, 22, 42, 0.35);
+}
+
+body.light-mode .timeline_date,
+body.light-mode .timeline_role,
+body.light-mode .timeline_company,
+body.light-mode .timeline_list,
+body.light-mode .timeline_quote {
+    color: #0f0f1a;
+}
+
+body.light-mode .divider-1,
+body.light-mode .divider-2,
+body.light-mode .divider-proj {
+    background: rgba(15, 22, 42, 0.2);
+}
+
+body.light-mode .scroll-down a,
+body.light-mode .scroll1,
+body.light-mode .arrow {
+    color: #0f0f1a;
+}
+
+body.light-mode #portfolio {
+    background: #f5f5f5;
+}
+
+body.light-mode .portfolio-info,
+body.light-mode .portfolio-info .exp_info,
+body.light-mode .portfolio-info .exp_h1,
+body.light-mode .portfolio-info .exp_p,
+body.light-mode .graps,
+body.light-mode .graps .exp_h1,
+body.light-mode .graps .exp_p,
+body.light-mode .proj_p,
+body.light-mode .proj_info,
+body.light-mode .proj_info2,
+body.light-mode .grid_proj,
+body.light-mode .proj_tags span,
+body.light-mode .open-project-link,
+body.light-mode .preview-bar span {
+    color: #0f0f1a;
+}
+
+body.light-mode .portfolio-info .exp_p {
+    color: #4b5565;
+}
+
+body.light-mode .graps .exp_p {
+    color: #4b5565;
+}
+
+body.light-mode .exp-parent {
+    border-image: conic-gradient(
+        from var(--angle),
+        rgba(15, 22, 42, 0.08),
+        rgba(15, 22, 42, 0.34) 0.1turn,
+        rgba(15, 22, 42, 0.34) 0.15turn,
+        rgba(15, 22, 42, 0.08) 0.25turn
+    ) 30;
+}
+
+body.light-mode .grid_proj {
+    background: #f7f7f7;
+}
+
+body.light-mode .proj_tags span {
+    border-color: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .exp-parent,
+body.light-mode .div1,
+body.light-mode .div2,
+body.light-mode .child-1,
+body.light-mode .child-2,
+body.light-mode .child-3,
+body.light-mode .child-4,
+body.light-mode .graph-grid,
+body.light-mode .graph-container,
+body.light-mode .socials,
+body.light-mode .socials a[data-tooltip]::after,
+body.light-mode .socials a[data-tooltip]:hover::after,
+body.light-mode .socials a[data-tooltip]:focus::after {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(15, 22, 42, 0.12);
+}
+
+body.light-mode .socials {
+    color: #0f0f1a;
+}
+
+body.light-mode .socials img,
+body.light-mode .cnt-1 img,
+body.light-mode .cnt-2 img,
+body.light-mode .cnt-3 img,
+body.light-mode .cnt-4 img {
+    filter: none;
+}
+
+body.light-mode .hero-left .hi,
+body.light-mode .hero-left .p2,
+body.light-mode .hero-left .p3,
+body.light-mode .hero-left .name {
+    color: #0f0f1a;
+}
+

@@ -1,0 +1,31 @@
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .btn-resume {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 0 24px;
+    }
+}
+@media (max-width: 860px) {
+    .parent-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .div1,
+    .div2 {
+        padding: 26px;
+    }
+}

@@ -1,0 +1,485 @@
+/* ===========================
+   RESET
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #000000;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 40px;
+    height: 70px;
+    background: #0f0f1a;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(15, 15, 30, 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+body.light-mode .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ===========================
+   NAV LEFT
+=========================== */
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* ===========================
+   LOGO
+=========================== */
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    gap: 0.2rem;
+    margin-left: 80px;
+}
+
+.logo span {
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.logo span:hover {
+    transform: translateY(-8px) scale(1.15);
+    color: #cbbc13;
+}
+
+.logo span:nth-child(1n) {
+    transition-delay: 0.04s;
+}
+
+.logo span:nth-child(1n) {
+    transition-delay: 0.08s;
+}
+
+/* ===========================
+   NAV LINKS
+=========================== */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 0.9rem;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* ===========================
+   GLOW ANIMATION
+=========================== */
+@keyframes glow-pump {
+    0%, 100% {
+        box-shadow: 0 0 4px 0px rgba(225, 219, 219, 0);
+    }
+    50% {
+        box-shadow:
+            0 0 5px 3px rgba(255, 255, 255, 0.55),
+            0 0 10px 5px rgba(255, 255, 255, 0.18);
+    }
+}
+
+
+/* ===========================
+   DOWNLOAD RESUME BUTTON
+=========================== */
+.btn-resume {
+    padding: 9px 20px;
+    background: transparent;
+    color: #ffffff;
+    border: 1.5px solid #ffffff;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    justify-self: end;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    animation: glow-pump 3s ease-in-out infinite;
+}
+
+.btn-resume:hover {
+    background: #f1f1f1;
+    color: #000000;
+    border: 1.5px solid #3c3939ac;
+    animation: none;
+}
+
+
+/* ===========================
+   HAMBURGER (Mobile)
+=========================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    background: #0f0f1a;
+    padding: 24px 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.mobile-menu ul a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu ul a:hover,
+.mobile-menu ul a.active {
+    color: #ffffff;
+}
+
+.mobile-btn {
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+
+
+/* ===========================
+   NAV RIGHT (button group)
+=========================== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-self: end;
+}
+
+/* remove old justify-self from btn-resume
+   since nav-right handles alignment now */
+.btn-resume {
+    justify-self: unset;
+}
+
+/* Tech stock */
+.tech-h1 h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.tech-son span{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.tech-parent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    height: 400px;
+    padding: 20px 20px;
+}
+
+.tech-child{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    color: white;
+    text-align: center;
+}
+.tech-son {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 9px;
+    height: 100px;
+}
+/* images */
+
+.tech-son img {
+    width: 40px;
+    height: 40px;
+  
+}
+
+/* contact */
+
+
+#contact {
+    height: 100vh;
+         position: relative;
+  overflow: hidden;
+  
+}
+
+.contact-son {
+   position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+  height: auto;
+  color: white;
+}
+
+.contact-1 h1{
+margin-top: 100px;
+font-size: 30px;
+  position: relative;
+  display: inline-block;
+  color: #e6f9ff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-bottom: 14px;
+}
+
+
+.contact-1 h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, #fdfdfd, rgb(255, 255, 255));
+   animation: slideLine 4s ease-in-out infinite;
+}
+@keyframes slideLine {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(150%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+.contact-1 p{
+  text-align: justify;
+  max-width: 500px;
+  line-height: 1.5;
+  color: #e6f9ff;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* info */
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon img {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-label {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.contact-value {
+  color: #a0a8b8;
+  font-size: 0.85rem;
+}
+
+.contact-text span {
+    font-size: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  color: #e6e6e6;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: #cfcfcf;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: 1px solid #2196f3;
+}
+
+.contact-form button {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background: #1e88e5;
+}
+

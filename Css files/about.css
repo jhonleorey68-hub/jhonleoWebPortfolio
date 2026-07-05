@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0  ;
+}
+
+#about {
+    padding: 20px 0;
+    scroll-margin-top: 1px;
+    min-height: 50vh;
+    margin: 0 auto
+
+}
+/* about me */
+
+.abt-me {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.div1 .abt-h1 {
+    font-size: clamp(3rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* parents */ 
+.parent-1 {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: start;
+    width: 100%;
+}
+
+.div1{
+    margin-top: -90px;
+}
+
+
+
+.div1,
+.div2 {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+
+/* div2 */
+.div2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: px;
+    min-height: auto;
+    margin-top: -70px;
+}
+
+
+.div2 > div {
+    
+    border-radius: px;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.div1 h2,
+.div1 h1,
+.div1 p,
+.div2 h2,
+.div2 p {
+    color: #ffffff;
+}
+.div1 h1 {
+    font-size: 25px;
+}
+
+/* keep the about heading size controlled by its own class */
+.div1 .abt-h1 {
+    font-size: 2rem;
+}
+
+/* paragraph */
+.abt-p1 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 650px;
+    font-size: 15px;
+}
+
+.focus-1 {
+    font-size: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.ul1{
+    display: flex;
+    font-size: 20px;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: s;
+    gap: 5px;
+    margin-top: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.ul1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.ul1 list {
+    display:ruby ;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10px;
+    background: rgba(255, 255, 255, 0.009);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    font-size: 10px;
+}
+.list-1::before {
+    content: "💻";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+.list-2::before {
+    content: "🌐";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+.list-3::before {
+    content: "🎨";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+.list-4::before {
+    content: "🎬";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 10px;
+    flex-shrink: 0;
+}
+
+
+/* container 2 */
+.div2 {
+    grid-template-columns: repeat(2, fr);
+    min-height: 380px;
+     justify-content: center;
+     flex-direction: column;
+}
+
+
+/* hover & animations*/
+.div2:hover {
+   border: 1px solid white;
+   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.div1:hover {
+   border: 1px solid white;
+   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.ul1 ul:hover {
+    animation: gentle-bounce 0.8s ease-in-out infinite;
+}
+/* div2 child */
+
+.child-1 {
+    display: flex;
+}
+
+
+.child-1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+    
+
+        
+/* adjustment */
+
+.cnt-1 img {
+    width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+.child-1 h1{
+    font-size: 50px;
+}
+
+.child-1 p{
+    font-size: 20px;
+}
+
+/* child 2 */
+.child-2{
+    border-bottom: 2px solid gray;
+}
+.child-2 h1{
+    font-size: 50px;
+}
+.child-2 p{
+    font-size: 15px;
+}
+.child-2 h1{
+    font-size: 50px;
+}
+.cnt-2 img {
+    width: 70px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
+}
+
+/* child-3 */
+.child-3{
+    border-right: 2px solid gray;
+}
+
+.child-3 h1{
+    font-size: 60px;
+    margin-left: 5px;
+}
+.child-3 p{
+    font-size: 15px;
+    margin-left: 1px;
+}
+
+.cnt-3 img {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
+}
+
+/* child-4 */
+.child-4 h1{
+    font-size: 40px;
+    margin-left: 5px;
+}
+.child-4 p{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.cnt-4 img {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
+}

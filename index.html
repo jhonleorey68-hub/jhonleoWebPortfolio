@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jhon Leo</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./Css files/style.css" />
+    <!-- home -->
+    <link rel="stylesheet" href="./Css files/Home.css" />
+    <!-- about me -->
+    <link rel="stylesheet" href="./Css files/about.css" />
+    <!-- Skills -->
+    <link rel="stylesheet" href="./Css files/skills.css" />
+    <!-- experience -->
+    <link rel="stylesheet" href="./Css files/experience.css" />
+    <!-- work -->
+    <link rel="stylesheet" href="./Css files/work.css" />
+    <!-- divider -->
+    <link rel="stylesheet" href="./Css files/divider.css" />
+    <!-- Light and Dark mode -->
+    <link rel="stylesheet" href="./Css files/theme-mode.css" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Js Script -->
+    <script src="./Js Files/script.js" defer></script>
+  </head>
+  <body>
+    <script>
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme === 'light') {
+        document.body.classList.add('light-mode');
+      } else if (storedTheme === 'dark') {
+        document.body.classList.remove('light-mode');
+      }
+    </script>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+      <!-- LEFT SIDE: Logo only -->
+      <div class="nav-left">
+        <div class="logo">
+          <span>M</span><span>y</span><span> </span><span>P</span><span>o</span
+          ><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span
+          ><span>i</span><span>o</span>
+        </div>
+      </div>
+
+      <!-- CENTER: Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+         <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#divider-2">Experience</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- RIGHT SIDE: Resume Button + Theme Toggle -->
+      <div class="nav-right">
+        <button
+          class="btn-resume"
+          onclick="window.open('./Assets/JhonleoResume 2026.pdf')"
+        >
+          Download Resume
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg
+            class="icon-moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg
+            class="icon-sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- HAMBURGER MENU (mobile) -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU DROPDOWN -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+         <li><a href="#">About Me</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button
+        class="btn-resume mobile-btn"
+        onclick="window.open('./Assets/JhonleoResume 2026.pdf')"
+      >
+        Download Resume
+      </button>
+    </div>
+    <!-- Main -->
+    <main>
+      <!-- Home -->
+
+      <section id="home">
+        <canvas id="homeParticles" aria-hidden="true"></canvas>
+        <!-- My info -->
+        <div class="hero-left">
+          <div class="container-1">
+            <p class="hi">Hi, I'm</p>
+            <h1 class="name">Jhon Leo Rey</h1>
+            <p class="p2">
+              I.T Support, Web Developer, Video Editing &
+              <span class="typing">Graphic design</span>
+            </p>
+            <p class="p3">
+              I develop web applications, design creative visuals, edit engaging
+              videos, and provide reliable IT solutions to transform ideas into
+              impactful digital experiences.
+            </p>
+          </div>
+          <!-- buttons -->
+          <div>
+            <button class="view">
+              <span class="contact-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="6"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <span><a href="#portfolio">View My work</a></span>
+            </button>
+            <button class="contact">
+              <span class="contact-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span><a href="#contact">Contact Me</a></span>
+            </button>
+          </div>
+          <!-- socials -->
+          <div class="socials">
+            <a
+              class="soc-1"
+              href="https://www.facebook.com/profile.php?id=61585022841323"
+              target="_blank"
+              data-tooltip="@jhon Leo"
+              ><img src="./Assets/fb.png" alt="fb"
+            /></a>
+            <a
+              class="soc-2"
+              href="https://mail.google.com"
+              target="_blank"
+              data-tooltip="jhonleorey69@gmail.com"
+              ><img src="./Assets/gmail.png" alt="gmail"
+            /></a>
+            <a
+              class="soc-3"
+              href="https://ph.linkedin.com/in/jhon-leo-zabala-rey-7115b926a"
+              target="_blank"
+              data-tooltip="@jhon Leo Rey"
+              ><img src="./Assets/link.png" alt="link"
+            /></a>
+          </div>
+        </div>
+        <div class="col2">
+          <img class="flex" src="./Assets/jhon(1).png" />
+        </div>
+      </section>
+      <!-- scroll down -->
+      <div class="scroll-down">
+        <a href="#skills">
+          <span class="scroll1">Scroll Down</span>
+          <div class="arrow">↓</div>
+        </a>
+      </div>
+      <!-- divide 1 -->
+      <div class="divider-1"></div>
+      <!-- About me -->
+
+      <section id="about">
+        <!-- parent 1 -->
+        <div class="parent-1">
+          <!-- container -->
+          <div class="div1">
+            <h2 class="abt-me">About Me</h2>
+            <h1 class="abt-h1">
+              Building digital solutions while continuously learning and
+              growing.
+            </h1>
+            <p class="abt-p1">
+              I'm an aspiring Web Developer and IT Support Specialist with
+              hands-on experience in technical support, website development,
+              graphic design, and video editing. I enjoy solving technical
+              problems, creating user-friendly digital experiences, and
+              continuously improving my skills through real-world projects and
+              new technologies.
+            </p>
+            <h2 class="focus-1">Focused On</h2>
+            <div class="ul1">
+              <ul>
+                <list class="list-1">IT Technical Support</list>
+                <list class="list-2">Web Development</list>
+                <list class="list-3">Graphics Design</list>
+                <list class="list-4">Video Editing</list>
+              </ul>
+            </div>
+          </div>
+          <div class="div2">
+            <!-- child 1 -->
+            <div class="child-1">
+              <div class="cnt-1"><img src="./Assets/job icon.png" /></div>
+              <div>
+                <h1>2+</h1>
+                <p>Years</p>
+              </div>
+            </div>
+            <!-- child 2 -->
+            <div class="child-2">
+              <div class="cnt-2">
+                <img src="./Assets/folder.png" />
+              </div>
+              <div>
+                <h1>15+</h1>
+                <p>Project Completed</p>
+              </div>
+            </div>
+            <!-- child 3 -->
+            <div class="child-3">
+              <div class="cnt-3">
+                <img src="./Assets/medal.png" />
+              </div>
+              <div>
+                <h1>3</h1>
+                <p>Tesda Certificates</p>
+              </div>
+            </div>
+            <!-- child 4 -->
+            <div class="child-4">
+              <div class="cnt-4">
+                <img src="./Assets/user.png" />
+              </div>
+              <div>
+                <h1>100%</h1>
+                <p>Client Satisfactions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="divider-2"></div>
+      <!-- SKills -->
+
+      <section id="skills">
+        <!-- skill top -->
+        <div class="skills-info">
+          <p class="skillp1">What I Do </p>
+          <h1 class="skillh1">SKills & Expertise</h1>
+        </div>
+        <!-- holder -->
+        <div class="parent-div2">
+
+          <!-- child -->
+   <div class="skill_chl1">
+    <img src="/Assets/code.png" alt="Web development icon">
+    <p class="skill_title">Web Development</p>
+    <div class="skill_tags">
+      <span class="skill_tag">Wordpress</span>
+      <span class="skill_tag">Elementor</span>
+      <span class="skill_tag">WooCommerce</span>
+      <span class="skill_tag">HTML</span>
+      <span class="skill_tag">CSS</span>
+      <span class="skill_tag">JavaScript</span>
+    </div>  
+  </div>
+  <!-- Child 2 -->
+    <div class="skill_chl2">
+    <img src="./Assets/technical-support.png" alt="Web development icon">
+    <p class="skill_title">IT support</p>
+    <div class="skill_tags">
+      <span class="skill_tag">Hardware</span>
+      <span class="skill_tag">Networking</span>
+      <span class="skill_tag">Windows 10/11</span>
+      <span class="skill_tag">Troubleshooting</span>
+    </div>  
+  </div>
+  <!-- Child 3 -->
+            <div class="skill_chl3">
+    <img src="./Assets/computer.png" alt="Web development icon">
+    <p class="skill_title">Tools and automation</p>
+    <div class="skill_tags">
+      <span class="skill_tag">Excel</span>
+      <span class="skill_tag">Zapier</span>
+      <span class="skill_tag">Google Sheets API</span>
+      <span class="skill_tag">Google Apps Script</span>
+    </div>  
+  </div>
+  <!-- child 4 -->
+       <div class="skill_chl4">
+    <img src="/Assets/social-media.png" alt="Web development icon">
+    <p class="skill_title">Design and media</p>
+    <div class="skill_tags">
+      <span class="skill_tag">Photoshop</span>
+      <span class="skill_tag">Canva</span>
+      <span class="skill_tag">CapCut</span>
+      <span class="skill_tag">Adobe Illustrator</span>
+    </div>  
+  </div>
+      </section>
+      <div id="divider-2" class="divider-2"></div>
+      <!-- Experience -->
+
+      <section id="experience">
+  <div class="skills-info">
+          <p class="skillp1">My Journey </p>
+          <h1 class="skillh1">Experience Timeline</h1>
+        </div>
+        <!-- Parent div 3 Holder -->
+         <div class="time_line">
+<!-- child 1-->
+ <div class="container left-container">
+ <div class="timeline_chl1">
+ <span class="timeline_date">August 2025 - current</span>
+ <h3 class="timeline_role">IT Technical Support / Web Developer</h3>
+ <p class="timeline_company">Starlegends Adventure Inc</p>
+ <p class="timeline_qoute">Bridging Tech Support and Web Development.</p>
+ <ul class="timeline_list">
+  <li>Developed and managed websites using WordPress, Elementor, WooCommerce</li>
+        <li>Performed website QA testing to catch bugs and layout issues</li>
+        <li>Designed banners and promotional graphics</li>
+        <li>Diagnosed and resolved hardware and network issues</li>
+ </ul>
+ <span class="left-container-arrow"></span>
+</div>
+ </div>
+<!-- child 2 -->
+ <div class="container right-container">
+  <div class="timeline_chl1">
+      <span class="timeline_date">Jan 2026 – Current </span>
+      <h3 class="timeline_role">Freelance Web Developer</h3>
+      <p class="timeline_company">Self-Employed</p>
+      <p class="timeline_quote">Building modern, responsive, and user-focused websites.</p>
+      <ul class="timeline_list">
+        <li>Design and develop responsive websites using HTML, CSS, and JavaScript.</li>
+        <li>Build and customize WordPress websites with Elementor and WooCommerce.</li>
+        <li>Maintain, update, and troubleshoot client websites.</li>
+        <li>Collaborate with clients to deliver websites that meet business goals.</li>
+        <li>Develop custom client request systems, HR systems, and workflow automation using Google Apps Script.</li>
+      </ul>
+      <span class="right-container-arrow"></span>
+    </div>
+ </div>
+<!-- child 3 -->
+ <div class="container left-container">
+     <div class="timeline_chl1">
+      <span class="timeline_date">Jan - Aug 2025</span>
+      <h3 class="timeline_role">Claims Staff</h3>
+      <p class="timeline_company">Divine Word Hospital</p>
+      <p class="timeline_quote">"Accuracy and compliance in every claim."</p>
+      <ul class="timeline_list">
+        <li>Processed and encoded PhilHealth claims and ICD codes</li>
+        <li>Verified patient data for compliance</li>
+        <li>Coordinated with doctors and billing departments</li>
+      </ul>
+      <span class="left-container-arrow"></span>
+    </div>
+ </div>
+ <!-- child 4 -->
+  <div class="container right-container">
+    <div class="timeline_chl1">
+      <span class="timeline_date">May 2024 - Jan 2025</span>
+      <h3 class="timeline_role">IT Technical Support</h3>
+      <p class="timeline_company">Freight Process Outsourcing Solution Inc</p>
+      <p class="timeline_quote">"Keeping systems running, end to end."</p>
+      <ul class="timeline_list">
+        <li>Installed and maintained computer systems and network devices</li>
+        <li>Monitored system performance and routine maintenance</li>
+        <li>Supported data backup and recovery operations</li>
+      </ul>
+      <span class="right-container-arrow"></span>
+    </div>
+    </div>
+<!-- child 5 -->
+ <div class="container left-container">
+  <div class="timeline_chl1">
+      <span class="timeline_date">Nov 2023 - Dec 2023</span>
+      <h3 class="timeline_role">PSA Map Data Processor</h3>
+      <p class="timeline_company">Philippine Statistics Authority — Contractual</p>
+      <p class="timeline_quote">"Precision in every data point."</p>
+      <ul class="timeline_list">
+        <li>Processed and encoded geographic and demographic map data</li>
+        <li>Verified data accuracy against PSA standards</li>
+        <li>Completed assigned data entry tasks within contract deadlines</li>
+      </ul>
+      <span class="left-container-arrow"></span>
+    </div>
+ </div>
+<!-- child 6 -->
+ <div class="container right-container">
+     <div class="timeline_chl1">
+      <span class="timeline_date">2022 - 2023</span>
+      <h3 class="timeline_role">PhilHealth Reimbursement Encoder</h3>
+      <p class="timeline_company">RHU (Rural Health Unit)</p>
+      <p class="timeline_quote">"Attention to detail, claim by claim."</p>
+      <ul class="timeline_list">
+        <li>Encoded patient information and ICD codes</li>
+        <li>Verified member data for PhilHealth compliance</li>
+        <li>Scanned and uploaded claims documents</li>
+      </ul>
+      <span class="right-container-arrow"></span>
+    </div>
+ </div>
+</div>
+      </section>  
+      <div id="divider-2" class="divider-2"></div>
+      <!-- My work -->
+       <section id="portfolio">
+          <div>
+            <div class="portfolio-info">
+          <p class="exp_info">My Work </p>
+          <h1 class="exp_h1">Building websites, automations, and business solutions that solve real-world problems.</h1>
+          <p class="exp_p">From custom WordPress websites to Google Apps Script automation, every project focuses on creating efficient, user-friendly, and scalable digital solutions for businesses and clients. Each experience has strengthened my skills in web development, system design, and workflow automation.</p>
+        </div>
+        <div class="exp-parent">
+<p class="proj_p">My Projects</p>
+    <div class="proj_info">
+          <p>
+            My Web Development Projects
+          </p>
+        </div>
+        <!-- mother -->
+<div class="proj_grid">
+  <!-- child 1-->
+<div class="grid_proj">
+  <img src="./Assets/project 1.png" alt="Project 1"/>
+  <p>Selected Release</p>
+  <h1>StarLegends Adventure Inc.</h1>
+  <h4 class="proj_info2">A modern travel and business platform designed to connect entrepreneurs, travelers, and digital communities through an all-in-one online experience. The platform provides travel booking services, learning resources, business tools, and member management while maintaining a responsive, professional, and user-friendly interface</h4>
+  <div>
+    <span>WordPress</span>
+    <span>Elementor</span>
+    <span>CSS</span>
+    <span>Html</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+  </div>
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="http://starlegends.com.ph/" target="_blank" class="open-project-link">Open project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+<!-- child 2 -->
+<div class="grid_proj">
+  <img src="./Assets/explore.png" alt="Project 1"/>
+  <p>Selected Release</p>
+  <h1>ExplorePinas - Landing Page</h1>
+  <h4 class="proj_info2">A travel-focused landing page designed to inspire users to discover the beauty of the Philippines through affordable tour packages and curated travel experiences. The website combines engaging visuals, responsive layouts, and intuitive navigation to create a seamless browsing experience for travelers across desktop and mobile devices.</h4>
+  <div class="proj_tags">
+    <span>WordPress</span>
+    <span>Elementor</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+  </div>
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://explorepinas.starlegends.com.ph/?fbclid=IwY2xjawS2ljVleHRuA2FlbQIxMABicmlkETFIMjdBbHNzOFI1MW9qNmVDc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHp3aPOklDQL2c_Fvb7nj9GUPYEeicCd_W6K7npB248SF1JWkt03ptKTMkpbd_aem_PMQCvaL6Hvu5bDZYNVsb_w/" target="_blank" class="open-project-link">Open project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+<!-- child 3 -->
+ <div class="grid_proj">
+  <img src="./Assets/satt.png" alt="Project 1"/>
+  <p>Selected Release</p>
+  <h1>A & T Travel and Tours by SATT</h1>
+  <h4 class="proj_info2">Designed and developed a modern travel landing page that showcases tour packages, hotel accommodations, and travel services. The page features responsive layouts, intuitive navigation, and clear call-to-action sections that help visitors explore destinations and connect with the agency for bookings and inquiries.</h4>
+  <div>
+    <span>WordPress</span>
+    <span>Elementor</span>
+    <span>CSS</span>
+    <span>Html</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+  </div>
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://starlegends.com.ph/a-and-travel-and-tours-by-satt/?fbclid=IwY2xjawS2nZtleHRuA2FlbQIxMABicmlkETFIMjdBbHNzOFI1MW9qNmVDc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHnzvMG9Ja244LtK3BKFzqN5xPAITLL67uFIB7DSSVG6mhtuH_jhntiPGwAOo_aem_FYtT4Nb74TFPJIfT2b1cgA" target="_blank" class="open-project-link">Open project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+<!-- child 4 -->
+<div class="grid_proj">
+  <img src="./Assets/jtek.png" alt="Project 1"/>
+  <p>Selected Release</p>
+  <h1>J Powertek Materials Supply Database</h1>
+  <h4 class="proj_info2">A cloud-based inventory management application built with Google Apps Script to digitize material records and simplify inventory operations. The system provides an intuitive interface for managing supply data, searching inventory, and maintaining accurate records in real time.</h4>
+  <div>
+    <span>Google Apps Script</span>
+    <span>Inventory System</span>
+    <span>Database</span>
+    <span>Automation</span>
+    <span>JavaScript</span>
+    <span>HTML/CSS</span>
+  </div>
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://script.google.com/macros/s/AKfycbx7Kov60b25wlhW4t_hqdFdeJrgc01RI95J1ZAFab91H5iBshPxHMsIE0-CuWDvfeLdeg/exec" target="_blank" class="open-project-link">Open project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+<!--child 5 -->
+<div class="grid_proj">
+  <img src="./Assets/sofia.png" alt="Project 1"/>
+  <p>Selected Release</p>
+  <h1>SofiaHealth – Healthcare & Wellness Platform</h1>
+  <h4 class="proj_info2">Designed and developed a modern healthcare landing page that promotes wellness services, health programs, and practitioner resources. The website features a clean and responsive interface, intuitive navigation, engaging call-to-action sections, and optimized layouts that provide users with a seamless browsing experience across desktop and mobile devices.</h4>
+  <div>
+     <span>WordPress</span>
+    <span>Elementor</span>
+    <span>CSS</span>
+    <span>Html</span>
+    <span>JavaScript</span>
+    <span>Python</span>
+  </div>
+
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://sofiahealth.is-best.net/wp/" target="_blank" class="open-project-link">Open project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+<!-- child 6 -->
+ <div class="grid_proj">
+  <img src="./Assets/inventory.png" alt="Project 1"/>
+  <p>Selected Release</p>
+  <h1>Inventory & Department Request Management System</h1>
+  <h4 class="proj_info2">A cloud-based inventory and request management system developed to streamline the distribution of company materials across multiple departments. The application enables authorized users to submit material requests, track request status, manage inventory levels, and maintain accurate transaction records through a centralized web platform.</h4>
+  <div class="proj_tags">
+    <span>Google Apps Script</span>
+    <span>Google Sheets</span>
+    <span>HTML/CSS</span>
+    <span>JavaScript</span>
+  </div>
+   <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://script.google.com/macros/s/AKfycbySj4K0nAi9ILE5JUu9kVBUokxo7v5oRa8ZftBCbVwdNuomQdOK6QhsUd54dtT8Bd6x/exec" target="_blank" class="open-project-link">Open project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a>
+</div>
+</div>
+</div>
+</div>
+<!-- END -->
+<div class="graps">
+ <p class="proj_p">My Graphics & Video Edits</p>
+ <h1 class="exp_h1">Creating visuals, videos, and digital content that bring ideas to life.</h1>
+          <p class="exp_p">From social media graphics and promotional materials to cinematic video edits and branding assets, every project is crafted to communicate messages clearly, strengthen brand identity, and capture audience attention. Each design reflects my creativity, attention to detail, and passion for producing engaging visual experiences.</p> 
+        </div>
+        <!-- mother graph -->
+<div class="graph-container">
+  <!-- graph 1 -->
+<div class="graph-grid">
+<div class="grid_proj">
+  <img src="./Assets/crop 10.png" alt="Project 1"/>
+  <p>Skills/Tags:</p>
+  <h1>Creative Graphic Design Portfolio</h1>
+  <h4 class="proj_info2">A professional graphic design portfolio showcasing creative branding, social media graphics, marketing materials, print designs, and digital content. Focused on delivering clean, modern, and visually engaging designs that strengthen brand identity while meeting client goals through creativity, consistency, and attention to detail.</h4>
+  <div>
+    <span>Canva</span>
+    <span>Social Media Design</span>
+    <span>Adobe Photoshop</span>
+  </div>
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://canva.link/wn3gog0pprr9r4y" target="_blank" class="open-project-link">Click the Link <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+</div>
+<!-- graph 2 -->
+<div class="graph-grid">
+<div class="grid_proj">
+ <video src="./Assets/My latest edit.mp4" height="260px"
+ width="500px" controls autopla></video>
+  <p>Skills/Tags:</p>
+  <h1>Professional Video Editing Portfolio</h1>
+  <h4 class="proj_info2">A creative video editing portfolio featuring promotional videos, social media content, corporate presentations, event highlights, and cinematic edits. Focused on producing engaging, high-quality visuals through seamless transitions, color grading, motion graphics, and storytelling that captures audience attention.</h4>
+  <div>
+    <span>CapCut Pro</span>
+  </div>
+  <div id="divider-2" class="divider-proj"></div>
+<div class="prj_btn">
+  <div><span>PUBLIC PREVIEW</span></div>
+  <div><a href="https://drive.google.com/drive/folders/16IJxP9UXnlaQ9STZ52X9f7wNZ4o3588w?usp=drive_link" target="_blank" class="open-project-link">Click the Link <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg></a></div>
+</div>
+</div>
+</div>
+</div>
+       </section>
+        <div id="divider-2" class="divider-2"></div>
+<!-- tech stock -->
+ <section id="tech">
+  <!-- mother -->
+  <div class="tech-holder">
+  <div class="skills-info">
+          <p class="skillp1">Technologies</p>
+          <h1 class="skillh1">Tech Stack</h1>
+          <div class="tech-parent">     
+                   <!-- child -->
+   <div class="tech-h1"> <h1>Programming Languages</h1>
+<div class="tech-child">
+  <!-- 1 -->
+  <div class="tech-son">
+    <span>HTML</span>
+    <img src="./Assets/html.png" alt="">
+  </div>
+  <!-- 2 -->
+  <div class="tech-son">
+    <span>CSS</span>
+    <img src="./Assets/css.png" alt="">
+  </div>
+  <!-- 3 -->
+   <div class="tech-son">
+    <span>Java Script</span>
+    <img src="./Assets/js.png" alt="">
+  </div>
+  <!-- 4 -->
+   <div class="tech-son">
+    <span>Apps Script</span>
+    <img src="./Assets/google-apps-script.png" alt="">
+  </div>
+  <!-- 5 -->
+   <div class="tech-son">
+    <span>Python</span>
+    <img src="./Assets/python.png" alt="">
+  </div>
+  <!-- end -->
+</div>
+</div>
+<!-- child 2 -->
+    <div class="tech-h1"> <h1>Frameworks & Libraries</h1>
+      <!-- 1 -->
+<div class="tech-child">
+  <div class="tech-son">
+  <span>Elementor</span>
+    <img src="./Assets/elementor.png" alt="">
+  </div>
+  
+<!-- 3 -->
+</div>
+</div>
+<!-- child 3 -->
+    <div class="tech-h1"> <h1>Tools & Software</h1>
+<div class="tech-child">
+  <div class="tech-son">
+  <span>Canva</span>
+    <img src="./Assets/canva(1)(1).png" alt="">
+  </div>
+  <div class="tech-son">
+     <span>Visual Studio Code</span>
+    <img src="./Assets/Vs.png" alt="">
+  </div>
+  <!-- 3 -->
+   <div class="tech-son">
+     <span>Photoshop</span>
+    <img src="./Assets/photoshop.png" alt="">
+  </div>
+  <!-- end -->
+</div>
+</div>
+<!-- child 3 -->
+    <div class="tech-h1"> <h1>Platforms & Technologies</h1>
+<div class="tech-child">
+  <!-- 1 -->
+  <div class="tech-son">
+     <span>WordPress</span>
+    <img src="./Assets/wordpress.png" alt="">
+  </div>
+  <!-- 2 -->
+  <div class="tech-son"> 
+    <span>Google Workspace</span>
+    <img src="./Assets/google-for-education.png" alt="">
+  </div>
+  <!-- 3 -->
+  <div class="tech-son"> 
+    <span>Google Sheets</span>
+    <img src="./Assets/sheet.png" alt="">
+  </div>
+  <!-- 4 -->
+  <div class="tech-son"> 
+    <span>Google Forms</span>
+    <img src="./Assets/google-forms_2991110.png" alt="">
+  </div>
+  <!-- 5 -->
+  <div class="tech-son">
+     <span>LocalWp</span>
+    <img src="./Assets/cropped-Local-favicon.webp" alt="">
+  </div>
+</div>
+</div>
+<!-- end -->
+          </div>
+        </div>
+  </div>
+ </section>
+  <div id="divider-2" class="divider-2"></div>
+<section id="contact">
+  <div class="contact-parent">
+    <div class="contact-son">
+<div class="contact-1">
+  <h1>
+    Get In Touch
+  </h1>
+  <p>
+I'm always open to new opportunities, freelance projects, and collaborations in Web Development, Google Apps Script Automation, Graphic Design, and Video Editing. Whether you need a business website, workflow automation, or creative digital content, I'd be happy to discuss how I can help bring your ideas to life.
+  </p>
+  <div id="divider-2" class="divider-2"></div>
+<div class="contact-info-list">
+
+  <div class="contact-info-item">
+    <div class="contact-icon"><img src="./Assets/icons8-phone-50.png" alt="Phone"></div>
+    <div class="contact-text">
+      <span class="contact-label">Phone</span>
+      <span class="contact-value">+63 9921573821</span>
+    </div>
+  </div>
+
+  <div class="contact-info-item">
+    <div class="contact-icon"><img src="./Assets/icons8-gmail-50.png" alt="Email"></div>
+    <div class="contact-text">
+      <span class="contact-label">Email</span>
+      <span class="contact-value">Jhonleorey65@gmail.com</span>
+    </div>
+  </div>
+
+  <div class="contact-info-item">
+    <div class="contact-icon"><img src="./Assets/icons8-location-50.png" alt="Location"></div>
+    <div class="contact-text">
+      <span class="contact-label">Location</span>
+      <span class="contact-value">Philippines</span>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- contact -->
+<form class="contact-form" action="https://formspree.io/f/xpqgbrjq" method="POST">
+  <div class="form-row">
+    <div class="form-group">
+      <label>Your Name</label>
+      <input type="text" name="name" required>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Subject</label>
+    <input type="text" name="subject" required>
+  </div>
+
+  <div class="form-group">
+    <label>Say Something</label>
+    <textarea name="message" rows="5" required></textarea>
+  </div>
+
+  <button type="submit">Send message</button>
+</form>
+</section>
+<div id="divider-2" class="divider-2"></div>
+    </main>
+  </body>
+</html>
