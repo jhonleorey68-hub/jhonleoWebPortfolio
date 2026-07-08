@@ -192,13 +192,13 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    gap:8px;
-   
-    margin:15px 0 0 0;
+    gap: 8px;
+    margin: 15px 0 0 0;
     border-radius: 12px;
-    background-color:rgba(255, 255, 255, 0.05);
-    border:1px solid rgba(255, 255, 255, 0.536);
-    width: 150px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.536);
+    width: fit-content;
+    padding: 8px;
 }
 
 .socials:hover {
