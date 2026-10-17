@@ -21,6 +21,10 @@ main {
     padding: 0 24px;
 }
 
+main > section {
+    scroll-margin-top: 84px;
+}
+
 /* ===========================
    NAVBAR
 =========================== */
@@ -274,10 +278,10 @@ body.light-mode .navbar.scrolled {
 }
 .tech-parent{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    height: 400px;
+    min-height: 400px;
+    height: auto;
     padding: 20px 20px;
 }
 
@@ -304,7 +308,7 @@ body.light-mode .navbar.scrolled {
 .tech-son img {
     width: 40px;
     height: 40px;
-  
+    object-fit: contain;
 }
 
 /* contact */

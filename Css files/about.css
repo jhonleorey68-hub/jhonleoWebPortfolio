@@ -5,7 +5,7 @@
 
 #about {
     padding: 20px 0;
-    scroll-margin-top: 1px;
+    scroll-margin-top: 84px;
     min-height: 50vh;
     margin: 0 auto
 
@@ -28,7 +28,7 @@
 /* parents */ 
 .parent-1 {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 30px;
     align-items: start;
     width: 100%;
@@ -42,6 +42,7 @@
 
 .div1,
 .div2 {
+    min-width: 0;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 24px;
@@ -53,7 +54,7 @@
 /* div2 */
 .div2 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     min-height: auto;
     margin-top: -70px;
@@ -61,12 +62,13 @@
 
 
 .div2 > div {
-    
+    min-width: 0;
     border-radius: 12px;
-    padding: 40px 20px;
+    padding: 24px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 12px;
     min-height: 180px;
     color: #ffffff;
     font-size: 16px;
@@ -128,7 +130,7 @@
     margin-left: 25px;
 }
 
-.ul1 list {
+.ul1 li {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -139,7 +141,7 @@
     font-size: 10px;
 }
 .list-1::before {
-    content: "💻";
+    content: "IT";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +153,7 @@
     flex-shrink: 0;
 }
 .list-2::before {
-    content: "🌐";
+    content: "</>";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +165,7 @@
     flex-shrink: 0;
 }
 .list-3::before {
-    content: "🎨";
+    content: "GD";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +177,7 @@
     flex-shrink: 0;
 }
 .list-4::before {
-    content: "🎬";
+    content: "\25B6";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,10 +220,10 @@
 
 
 .child-1 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     border-right: 2px solid gray;
     border-bottom: 2px solid gray;
 }
@@ -231,7 +233,7 @@
 /* adjustment */
 
 .cnt-1 img {
-    width: 100px;
+    width: 60px;
     height: auto;
     filter: brightness(0) invert(1);
 }
@@ -257,10 +259,9 @@
     font-size: 50px;
 }
 .cnt-2 img {
-    width: 70px;
+    width: 52px;
     height: auto;
     filter: brightness(0) invert(1);
-    margin-right: 10px;
 }
 
 /* child-3 */
@@ -278,10 +279,9 @@
 }
 
 .cnt-3 img {
-    width: 80px;
+    width: 52px;
     height: auto;
     filter: brightness(0) invert(1);
-    margin-right: 10px;
 }
 
 /* child-4 */
@@ -294,8 +294,7 @@
     margin-left: 10px;
 }
 .cnt-4 img {
-    width: 80px;
+    width: 52px;
     height: auto;
     filter: brightness(0) invert(1);
-    margin-right: 10px;
 }
