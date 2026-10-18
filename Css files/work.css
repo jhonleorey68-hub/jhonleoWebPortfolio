@@ -104,7 +104,8 @@
   border: 1px solid rgba(255, 255, 255, 0.562);
 }
 
-.grid_proj .hris-showcase {
+.grid_proj .hris-showcase,
+.grid_proj .tolosa-showcase {
   height: auto;
   aspect-ratio: 3 / 2;
   object-fit: contain;
