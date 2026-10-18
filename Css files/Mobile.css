@@ -247,7 +247,8 @@ main {
     .skill_chl1,
     .skill_chl2,
     .skill_chl3,
-    .skill_chl4 {
+    .skill_chl4,
+    .skill_chl5 {
         padding: 1rem;
     }
 

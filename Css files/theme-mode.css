@@ -374,7 +374,8 @@ body.light-mode .skills-info h1 {
 body.light-mode .skill_chl1,
 body.light-mode .skill_chl2,
 body.light-mode .skill_chl3,
-body.light-mode .skill_chl4 {
+body.light-mode .skill_chl4,
+body.light-mode .skill_chl5 {
     background: rgba(255, 255, 255, 0.95);
     border-color: rgba(15, 22, 42, 0.12);
 }
@@ -382,7 +383,8 @@ body.light-mode .skill_chl4 {
 body.light-mode .skill_chl1:hover,
 body.light-mode .skill_chl2:hover,
 body.light-mode .skill_chl3:hover,
-body.light-mode .skill_chl4:hover {
+body.light-mode .skill_chl4:hover,
+body.light-mode .skill_chl5:hover {
     box-shadow: 0 0 20px rgba(15, 22, 42, 0.08);
 }
 
@@ -511,4 +513,3 @@ body.light-mode .hero-left .p3,
 body.light-mode .hero-left .name {
     color: #0f0f1a;
 }
-
