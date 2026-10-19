@@ -183,9 +183,6 @@ main {
 
     .p2 {
         font-size: 1.05rem;
-        white-space: normal;
-        border-right: none;
-        animation: none;
     }
 
     .p3 {
@@ -344,6 +341,10 @@ main {
         height: 60px;
     }
 
+    .parent-div2 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .mobile-menu {
         padding: 16px;
     }
@@ -389,10 +390,6 @@ main {
     .socials img {
         width: 34px;
         height: 34px;
-    }
-
-    .parent-div2 {
-        grid-template-columns: 1fr;
     }
 
     .proj_grid img,
