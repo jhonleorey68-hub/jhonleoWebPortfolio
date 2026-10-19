@@ -53,7 +53,7 @@ updateNavbarOnScroll();
 // Rotating hero roles
 const typedRole = document.getElementById('typedRole');
 if (typedRole) {
-    const roles = ['I.T. Officer', 'Web Developer', 'Video Editor', 'Graphic Designer'];
+    const roles = ['I.T. Officer', 'Web Developer', 'Mobile Developer', 'Video Editor', 'Graphic Designer'];
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         typedRole.textContent = roles.join(' · ');
