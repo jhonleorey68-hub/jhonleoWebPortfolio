@@ -50,6 +50,45 @@ function updateNavbarOnScroll() {
 window.addEventListener('scroll', updateNavbarOnScroll);
 updateNavbarOnScroll();
 
+// Rotating hero roles
+const typedRole = document.getElementById('typedRole');
+if (typedRole) {
+    const roles = ['I.T. Officer', 'Web Developer', 'Video Editor', 'Graphic Designer'];
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typedRole.textContent = roles.join(' · ');
+    } else {
+        let roleIndex = 0;
+        let characterIndex = roles[0].length;
+        let deleting = false;
+
+        function typeNextRoleCharacter() {
+            const currentRole = roles[roleIndex];
+            typedRole.textContent = currentRole.slice(0, characterIndex);
+
+            if (!deleting && characterIndex === currentRole.length) {
+                deleting = true;
+                window.setTimeout(typeNextRoleCharacter, 1500);
+                return;
+            }
+
+            if (deleting && characterIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            } else {
+                characterIndex += deleting ? -1 : 1;
+            }
+
+            window.setTimeout(typeNextRoleCharacter, deleting ? 55 : 95);
+        }
+
+        window.setTimeout(() => {
+            deleting = true;
+            typeNextRoleCharacter();
+        }, 1800);
+    }
+}
+
 // Canvas Particle Animation
 const canvas = document.getElementById('homeParticles');
 if (canvas) {

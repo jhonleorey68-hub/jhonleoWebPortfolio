@@ -161,6 +161,29 @@
     line-height: 1.45;
     max-width: 100%;
 }
+
+.typing-caret {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 3px;
+    vertical-align: -0.12em;
+    background: currentColor;
+    animation: typing-caret-blink 0.75s step-end infinite;
+}
+
+@keyframes typing-caret-blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typing-caret {
+        animation: none;
+    }
+}
+
 .p3 {
     color: white;
     margin-bottom: 15px;
