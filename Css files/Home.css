@@ -93,6 +93,9 @@
 
     .col2 {
         justify-content: center;
+        width: fit-content;
+        max-width: 100%;
+        align-self: center;
     }
 
     .flex {
@@ -115,6 +118,9 @@
 
     .col2 {
         justify-content: center;
+        width: fit-content;
+        max-width: 100%;
+        align-self: center;
     }
 
     .col2:hover{
@@ -359,10 +365,10 @@
 
 @keyframes orbit-ring {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -377,9 +383,13 @@
 .col2::before {
     content: "";
     position: absolute;
-    inset: -16px;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 32px);
+    aspect-ratio: 1;
     border: 5px dotted rgba(255,255,255,0.95);
     border-radius: 50%;
+    transform: translate(-50%, -50%);
     animation: orbit-ring 10s linear infinite;
     box-shadow: 0 0 12px rgba(255,255,255,0.35);
 }
@@ -418,6 +428,9 @@
 
     .col2 {
         justify-content: center;
+        width: fit-content;
+        max-width: 100%;
+        align-self: center;
     }
 
     #home .flex {
