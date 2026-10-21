@@ -111,6 +111,12 @@
   object-fit: contain;
 }
 
+.grid_proj .hrd-hub-showcase {
+  height: auto;
+  aspect-ratio: 1490 / 768;
+  object-fit: contain;
+}
+
 
 .grid_proj p {
     text-align: left;
